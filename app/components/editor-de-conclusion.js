@@ -24,7 +24,6 @@ export default Ember.Component.extend({
           descripcion:"",
           responsables:[],
         }));
-      this.rerender();
     },
 
     },
