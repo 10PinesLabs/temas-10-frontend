@@ -18,8 +18,6 @@ export default Ember.Route.extend(MinutaServiceInjected, UserServiceInjected, Au
         .whenInterruptedAndReauthenticated(()=> {
           this.navigator().navigateToUsers();
         })
-    }).then((model)=> {
-      return model;
-    });
+    })
   }
 });
