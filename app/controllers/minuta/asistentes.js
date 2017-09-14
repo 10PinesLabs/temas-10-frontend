@@ -11,8 +11,8 @@ export default Ember.Controller.extend(MinutaServiceInjected, NavigatorInjected,
   usuariosSeleccionables: Ember.computed('model.usuarios', 'usuariosSeleccionados', function () {
     var todosLosUsuarios = this.get('model.usuarios');
     var usuariosSeleccionados = this.get('usuariosSeleccionados');
-    return todosLosUsuarios.filter(function (usuario) {
-      return !usuariosSeleccionados.some(function(seleccionado){
+    return todosLosUsuarios.reject(function (usuario) {
+      return usuariosSeleccionados.some(function(seleccionado){
         return usuario.id === seleccionado.id;
       });
     });
