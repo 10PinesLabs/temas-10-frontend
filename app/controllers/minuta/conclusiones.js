@@ -11,7 +11,7 @@ export default Ember.Controller.extend(TemaDeMinutaServiceInjected,{
     return temas.objectAt(indiceSeleccionado);
   }),
 
-  id: Ember.computed('model.reunionId', function () {
+  idDeReunion: Ember.computed('model.reunionId', function () {
     return this.get('model.reunionId');
   }),
 
