@@ -90,17 +90,7 @@ export default Ember.Controller.extend(ReunionServiceInjected, TemaServiceInject
     mostrarFormularioDeEdicion(tema){
       this._siNoEstaCerrada(function () {
         this._traerDuraciones().then(()=>{
-          this.set('temaAEditar', Tema.create({}));
-          this.set('temaAEditar.id', tema.id);
-          this.set('temaAEditar.duracion', tema.duracion);
-          this.set('temaAEditar.idDeAutor', tema.idDeAutor);
-          this.set('temaAEditar.ultimoModificador', tema.ultimoModificador);
-          this.set('temaAEditar.idDeReunion', tema.idDeReunion);
-          this.set('temaAEditar.prioridad', tema.prioridad);
-          this.set('temaAEditar.titulo', tema.titulo);
-          this.set('temaAEditar.descripcion', tema.descripcion);
-          this.set('temaAEditar.idsDeInteresados', tema.idsDeInteresados);
-          this.set('temaAEditar.obligatoriedad', tema.obligatoriedad);
+          this.set('temaAEditar', Tema.create(tema));
           this.set('obligatoriedadPasada',tema.obligatoriedad);
           this.set('esObligatorio', this.get('temaAEditar.esObligatorio'));
           this.set('mostrandoFormularioXTemaNuevo', false);
