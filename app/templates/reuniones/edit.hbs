@@ -44,7 +44,7 @@
           {{tema.prioridad}}
         </td>
 
-        <td class="con-padding">
+        <td class="con-padding" style="max-width:800px">
           {{tenpines/colored-label value=tema.autor bgColor='green'}}
           <h5 class="titulo-de-tema">{{tema.titulo}}</h5>
           <p class="crop">{{markdown-view value=tema.descripcion}}</p>
@@ -53,7 +53,7 @@
         <td class="con-padding">
           {{tema.duracion}}
         </td>
-        <td class="con-padding">
+        <td class="con-padding" >
           <span class="indivisible">
             {{#unless tema.esObligatorio}}
               <span {{action 'restarVoto' tema}} class="clickable">ᐁ</span>

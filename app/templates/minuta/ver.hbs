@@ -41,13 +41,13 @@
           </div>
         {{/panel.toggle}}
         {{#panel.body}}
-          <div>{{markdown-view value=tema.tema.descripcion}}</div>
+          <div class="crop">{{markdown-view value=tema.tema.descripcion}}</div>
           <h6><b>Conclusión</b></h6>
-          <div>{{markdown-view value=tema.conclusion}}</div>
+          <div class="crop" >{{markdown-view value=tema.conclusion}}</div>
           <ul class="collection">
             {{#each tema.actionItems as |actionItem|}}
               <li class="collection-item">
-                <span>{{markdown-view value=actionItem.descripcion}}</span>
+                <span class="crop">{{markdown-view value=actionItem.descripcion}}</span>
                 <span>
                   {{#each actionItem.responsables as |responsable|}}
                     {{tenpines/colored-label value=responsable.name bgColor='green'}}
